@@ -1,6 +1,9 @@
+import Body from '@pages/Home'
 
-export default function Home() {
+export default function Home () {
   return (
-    <></>
+    <>
+      <Body/>
+    </>
   )
 }
