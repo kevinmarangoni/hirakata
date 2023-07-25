@@ -1,5 +1,5 @@
 
-export interface IKanji {
+export default interface IKanji {
     id: number;
     hiragana: string;
     katakana: string;

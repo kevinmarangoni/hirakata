@@ -16,10 +16,10 @@ class ApiMethods {
     async getTyped(typeList: Array<string>):Promise<any>{
         let params = ""
         typeList.forEach((item, index)=>{
-            params = `${params}type=${item} ${ (index >= 1 && index < typeList.length) && `&`}`
+            params = `${params}type=${item}${ (index > 0 && index < typeList.length) ? `` : `&`}`
         })
         try{
-            const response = await axios.get(`${this.api}?${params}`)
+            const response = await axios.get(encodeURI(`${this.api}?${params}`))
             return response
         }
         catch(err){
