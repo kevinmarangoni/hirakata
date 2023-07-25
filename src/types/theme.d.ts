@@ -6,3 +6,6 @@ export interface ITheme {
     highlight: '#00ADB5' | '#FF6B6B'| string,
     font: '#EEEEEE' | '#333333'| string,
 }
+export interface IGlobalStyleProps {
+    theme: ITheme;
+  }

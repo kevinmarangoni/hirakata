@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import {ITheme, IGlobalStyleProps} from '@/types/theme'
+import { IGlobalStyleProps } from '@/types/theme'
 
 const globalStyle = createGlobalStyle<IGlobalStyleProps>`
 
@@ -12,7 +12,7 @@ const globalStyle = createGlobalStyle<IGlobalStyleProps>`
 
     html{
         background-color: ${props=> props.theme.background.primary};
-
+        
     }
 
 `
