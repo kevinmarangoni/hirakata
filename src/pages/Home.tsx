@@ -28,7 +28,7 @@ const Home:React.FC = () => {
         <>
           {data.map((item: IKanji)=>{
             return (
-              <p key={item.id}>{item.hiragana} = {item.romaji}</p>
+              <p key={item.id}>{item.hiragana} e {item.katakana} = {item.romaji}</p>
             )
           })}
         </>
