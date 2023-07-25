@@ -1,11 +1,18 @@
 import { createGlobalStyle } from "styled-components";
+import {ITheme, IGlobalStyleProps} from '@/types/theme'
 
-const globalStyle = createGlobalStyle`
+const globalStyle = createGlobalStyle<IGlobalStyleProps>`
 
     *{
         padding: 0;
         margin: 0;
         font-family: 'Doboto', sans-serif;
+        color: ${props=> props.theme.font}
+    }
+
+    html{
+        background-color: ${props=> props.theme.background.primary};
+
     }
 
 `
