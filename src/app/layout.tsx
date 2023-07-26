@@ -1,6 +1,9 @@
+
 import type { Metadata } from 'next'
 import Head from 'next/head'
 import StyledComponentsRegistry from '../../lib/registry'
+
+import Layout from '@/components/Layout/Layout'
 
 import Theme from '@context/Theme'
 
@@ -12,6 +15,7 @@ export const metadata: Metadata = {
 
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
+
   return (
     <StyledComponentsRegistry>
     <Theme>
@@ -20,7 +24,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
           <link href="https://fonts.cdnfonts.com/css/doboto" rel="stylesheet"/>
         </Head>
         <body>
-            {children}
+          <Layout>{children}</Layout>
         </body>
       </html>
     </Theme>
