@@ -17,7 +17,7 @@ const Theme: React.FC<IChildrenProps> = ({children}) => {
   return (
     <ThemeContext.Provider value={{isDark, setDark}}>
       <ThemeProvider theme={isDark? dark : light }>
-        <GlobalStyle/>
+        <GlobalStyle theme={isDark? dark : light }/>
           {children}
       </ThemeProvider>
     </ThemeContext.Provider>

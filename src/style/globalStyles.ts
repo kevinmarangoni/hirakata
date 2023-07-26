@@ -12,7 +12,6 @@ const globalStyle = createGlobalStyle<IGlobalStyleProps>`
 
     html{
         background-color: ${props=> props.theme.background.primary};
-        
     }
 
 `
